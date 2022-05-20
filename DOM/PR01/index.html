@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <h1>DOM</h1>
+    <input type="text" id="input1" placeholder="aqui">
+    <button onclick="getValue()">Añadir</button>
+
+    <p id="parrafo"></p>
+
+    <div id="lista"></div>
+
+    <script>
+        let nombre = document.getElementById('input1');
+        console.log(nombre);
+
+        let parrafo = document.getElementById('parrafo');
+
+        function getValue(){
+            console.log(nombre.value);
+            parrafo.innerHTML = `Bienvenido!!! ${nombre.value}`;
+
+            localStorage.setItem('Nombre', nombre.value);
+            localStorage.setItem('password', '12345678huhuh');
+
+            console.log(localStorage.getItem('password'));
+
+            let toDo = document.getElementById('lista');
+
+            let tarea = document.createElement('p')
+
+            toDo.appendChild(tarea);
+
+
+
+         }
+
+       
+
+
+
+
+    </script>
+
+</body>
+
+</html>
